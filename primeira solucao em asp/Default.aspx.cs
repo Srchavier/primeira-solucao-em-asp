@@ -145,7 +145,8 @@ namespace primeira_solucao_em_asp
                                     while (reader.Read())
                                     {
                                         Console.WriteLine(String.Format("{0}, {1}", reader[0], reader[1]));
-                                        SalarioText.Text = reader[5].ToString();
+                                        SalarioText.Text = Convert.ToDecimal(reader[5].ToString()).ToString("#,##0.00");
+
                                     }
                                 }
                                 reader.Close();
@@ -170,7 +171,7 @@ namespace primeira_solucao_em_asp
 
             double valorFinal = salario + (horasExtras * (salario / 100));
 
-            Calculo.Text = valorFinal.ToString();
+            Calculo.Text = "R$" + Convert.ToDecimal(valorFinal.ToString()).ToString("#,##0.00");
         }
     }
 }
