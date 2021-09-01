@@ -8,13 +8,34 @@
 
         <br />
         <asp:Button ID="Button1" runat="server" Text="Inserir" OnClick="Button1_Click" />
-        <asp:Button ID="Button2" runat="server" Text="Listar" />
-        <asp:Button ID="Button3" runat="server" Text="Adicionar" />
-        <asp:Button ID="Button4" runat="server" Text="Deletar" />
+
+        <br />
+        <br />
 
         <br />
 
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="487px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+        </asp:DropDownList>
+        <br />
+        <br />
+        <br />
+        <div  runat="server" id="MyDiv">
+            <asp:TextBox ID="SalarioText" runat="server" Width="364px" ReadOnly="True"></asp:TextBox>
+            <br />
+            <br />
+            <input ID="HorasExtras" type="number" runat="server"  placeholder="insira a quantidade de horas" prefix="2"/>
+            <br />
+            <br />
+
+            <asp:Button ID="Button2" runat="server" Text="Calcular horas" OnClick="Button2_Click" />
+            <br />
+            <br />
+            <asp:TextBox ID="Calculo" runat="server" Width="364px" ReadOnly="True"></asp:TextBox>
+            <br />
+            <br />
+        </div>
+
+        <asp:GridView ID="GridView1" runat="server" Height="164px" Width="1530px"></asp:GridView>
     </div>
 
 </asp:Content>

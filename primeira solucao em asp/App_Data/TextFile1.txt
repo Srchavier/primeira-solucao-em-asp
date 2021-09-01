@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[profissional] (
+    [Id]      INT        IDENTITY (1, 1) NOT NULL,
+    [nomeCompleto]    VARCHAR(100) NULL,
+    [telefone] NCHAR (13) NULL,
+    [rg] NCHAR(7) NULL, 
+    [enderecoCompleto] VARCHAR(150) NULL, 
+    [salario] MONEY NULL, 
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
